@@ -1,0 +1,105 @@
+@import url('./reset.css');
+
+:root {
+    --color-primary-400: hsl(75, 94%, 57%);
+    --color-secondary-400: hsl(0, 0%, 20%);
+    --color-secondary-500: hsl(0, 0%, 12%);
+    --color-secondary-600: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    display: grid;
+    place-items: center;
+    color: white;
+    height: 100vh;
+    background-color: var(--color-secondary-600);
+}
+
+.user__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-secondary-500);
+    color: white;
+    gap: 1rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
+}
+
+.user__avatar {
+    text-align: center;
+    font-style: italic;
+    border-radius: 50%;
+    width: 6rem;
+}
+
+.user__name {
+    font-size: 1.725rem;
+    font-weight: 600;
+}
+
+.user__location {
+    text-align: center;
+    color: var(--color-primary-400);
+    font-weight: 600;
+}
+
+.user__role {
+    color: white;
+    opacity: 80%;
+}
+
+.links__container {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.links__container li {
+    display: flex;
+}
+
+.links__item {
+    background-color: var(--color-secondary-400);
+    padding-block: 1rem;
+    padding-inline: 6rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--color-secondary-600);
+        background-color: var(--color-primary-400);
+        transition: all 0.3s ease-in-out;
+    }
+}
